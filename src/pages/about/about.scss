@@ -1,0 +1,85 @@
+@import '../../theme/color1.theme';
+@import '../../theme/color2.theme';
+@import '../../theme/color3.theme';
+@import '../../theme/color4.theme';
+@import '../../theme/color5.theme';
+@import '../../theme/color6.theme';
+@import '../../theme/color7.theme';
+@import '../../theme/color8.theme';
+@import '../../theme/light.theme';
+@import '../../theme/animations';
+
+page-about {
+
+	@font-face {
+		font-family: 'Zawgyi-One';	
+		src: url('/../../assets/fonts/Zawgyi-One.eot');
+		src: local('Zawgyi-One'), url('zawgyi.ttf') format('truetype'), url('zawgyi.woff') format('woff'), url('zawgyi.svg') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+	.textAbout{
+		text-align:center;
+		color:grey;
+	}
+	
+	.textVisMis{
+		text-align:center;
+		color:#344153;
+	}
+	
+	.about{
+		text-align:center;
+		color:#344153;
+		font-size:20px;
+		font-family:Monospace;
+	}
+	
+	.hr-text {
+		line-height: 1em;
+		position: relative;
+		outline: 0;
+		border: 0;
+		color: #344153;
+		text-align: center;
+		height: 1.5em;
+	}
+
+	.hr-text:before {
+		content: '';
+		background: linear-gradient(to right, transparent, #344153, transparent);
+		position: absolute;
+		left: 0;
+		top: 50%;
+		width: 100%;
+		height: 5px;
+	}
+
+	.hr-text:after {
+		
+		content: attr(data-content);
+		font-family:Monospace;
+		font-style:italic;
+		position: relative;
+		display: inline-block;
+		color: black;
+		padding: 0 .5em;
+  
+		line-height: 1.5em;
+		color: #344153;
+		background-color: #fcfcfa;
+	}
+	
+	.circle {
+		list-style-type:circle;
+		color:#344153;
+		font-family: 'Zawgyi-One';
+	}
+	
+	.square{
+		list-style-type:square;
+		color:#344153;
+		font-family: 'Zawgyi-One';
+	}
+}

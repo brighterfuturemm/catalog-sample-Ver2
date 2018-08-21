@@ -1,0 +1,64 @@
+<ion-header>
+	<ion-navbar color="light">
+		<button ion-button menuToggle >
+			<ion-icon name="menu"></ion-icon>
+		</button>
+    <ion-title>Contact Us</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<ion-list-header>
+			<br>
+			<h2 style="text-align:center;color:#344153;font-size:20px;font-family:Monospace;">GIVE US A CONTACT</h2>
+		</ion-list-header>
+		
+		<ion-item>
+			<ion-icon name="call" item-start class="icon-class"></ion-icon>
+			<p>
+				<a href="tel:09965088114" style="color:#106bd3;">09-965088114</a>, 
+				<a href="tel:09965088113" style="color:#106bd3;">09-965088113</a>
+			</p>
+		</ion-item>
+		
+		<ion-item>
+			<ion-icon name="mail-open" item-start class="icon-class"></ion-icon>
+			<p>
+				<a href="mailto:office@tworksystem.com" style="text-decoration:none;color:#106bd3;">office@tworksystem.com</a>
+			</p>
+		</ion-item>
+		
+		<ion-item>
+			<ion-icon name="map" item-start class="icon-class"></ion-icon>
+				<h6 style="color:#344153;">79th Street, between 39th <br>& 40th Street, Mandalay, Myanmar.</h6>
+		</ion-item>
+		
+		<ion-item>
+			<ion-icon name="globe" item-start class="icon-class"></ion-icon>
+			<p>
+				<a href="https://www.tworksystem.com" style="text-decoration:none;color:#106bd3;">https://www.tworksystem.com</a>
+			</p>
+		</ion-item>
+		
+		<ion-item>
+			<ion-icon name="logo-facebook" item-start style="color:#344153;"></ion-icon>
+			<p>
+				<a href="https://m.facebook.com/tworksystem" style="text-decoration:none;color:#106bd3;">T-WORK SYSTEM</a>
+			</p>
+		</ion-item>
+		
+		<ion-item>
+			<h3 style="text-align:center;font-family:Monospace;font-size:16px;color:#344153;" class="icon-class">
+			AVAILABLE AT : <br><br> 8:30 A.M. TO 5:30 P.M. <br>
+			(Monday to Saturday)
+			</h3>
+		</ion-item>
+		
+	</ion-list>
+	  
+	<div class="google-map-route">
+		<button ion-button (click)="showRoute()" style="background-color:#344153;">Route</button>
+		<div #map id="map"></div>
+	</div>
+</ion-content>

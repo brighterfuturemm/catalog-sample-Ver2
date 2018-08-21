@@ -1,23 +1,228 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>List</ion-title>
-  </ion-navbar>
+	<ion-navbar color="light">
+		<button ion-button menuToggle >
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>T-Work System</ion-title>
+	</ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-end>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
-</ion-content>
+	<ion-refresher (ionRefresh)="refresh($event)">
+		<ion-refresher-content
+			pullingIcon="arrow-dropdown"
+			pullingText="Pull to refresh"
+			refreshingSpinner="circles"
+			refreshingText="Refreshing...">
+		</ion-refresher-content>
+     </ion-refresher>
+ 
+	      <ion-slides pager class="home-slide" *ngIf="backslide && backslide.length" autoplay="2000" loop="true" style="200px">	
+			  <ion-slide *ngFor="let img of backslide" slidesPerView="1.5" >
+				  <img [src]="img">
+			  </ion-slide >
+	     </ion-slides>
+
+	<ion-row>
+		
+		<ion-col col-6>
+			<span *ngFor="let poloMax of categories7;let k=index;">
+				<span *ngIf="k==0">
+					<ion-card *ngFor="let client of poloMax.categories;let i=index;" class="text-center slider-item" style="color:blue;">
+						<span *ngIf="i==0">
+							<span *ngFor="let img of poloMax.images;let j=index;" >
+								<ion-card *ngIf="j==0" class="img-width">
+									<img [src]="img.src" *ngFor="let card1 of cards1" (click)="cardTapped($event,card1)"/>
+								</ion-card>
+							</span>
+							<div style="text-align:center;width:100%;margin:10px 10px 10px 2px;color:black;">
+								{{client.name}}<br>
+								<button ion-button style="text-align:center" class="ioncolor" color="dark" small style="box-shadow:5px 5px 2px grey" *ngFor="let card1 of cards1" (click)="cardTapped($event,card1)">~ View More ~</button>
+							</div>
+						</span>
+					</ion-card>
+				</span>
+			</span>
+		</ion-col>
+		
+		<ion-col col-6>
+			<span *ngFor="let poloMax of categories8;let k=index;">
+				<span *ngIf="k==0">
+					<ion-card *ngFor="let client of poloMax.categories;let i=index;" class="text-center slider-item" style="color:blue;">
+						<span *ngIf="i==0">
+							<span *ngFor="let img of poloMax.images;let j=index;" >
+								<ion-card *ngIf="j==0" class="img-width">
+									<img [src]="img.src" *ngFor="let card2 of cards2" (click)="cardTapped($event,card2)"/>
+								</ion-card>
+							</span>
+							<div style="text-align:center;width:100%;margin:10px 10px 10px 2px;color:black;">
+								{{client.name}} <br>
+								<button ion-button style="text-align:center" class="ioncolor" color="dark" small style="box-shadow:5px 5px 2px grey" *ngFor="let card2 of cards2" (click)="cardTapped($event,card2)">~ View More ~</button>
+							</div>
+						</span>
+					</ion-card>
+				</span>
+			</span>
+		</ion-col>
+		
+		<ion-col col-6>
+			<span *ngFor="let poloMax of categories3;let k=index;">
+				<span *ngIf="k==0">
+					<ion-card *ngFor="let client of poloMax.categories;let i=index;" class="text-center slider-item" style="color:blue;">
+						<span *ngIf="i==0">
+							<span *ngFor="let img of poloMax.images;let j=index;" >
+								<ion-card *ngIf="j==0" class="img-width">
+									<img [src]="img.src" *ngFor="let card3 of cards3" (click)="cardTapped($event,card3)"/>
+								</ion-card>
+							</span>
+							<div style="text-align:center;width:100%;margin:10px 10px 10px 2px;color:black;">
+								{{client.name}} <br>
+								<button ion-button style="text-align:center" class="ioncolor" color="dark" small style="box-shadow:5px 5px 2px grey" *ngFor="let card3 of cards3" (click)="cardTapped($event,card3)">~ View More ~</button>
+							</div>
+						</span>
+					</ion-card>
+				</span>
+			</span>
+		</ion-col>
+		
+		<ion-col col-6>
+			<span *ngFor="let poloMax of categories4;let k=index;">
+				<span *ngIf="k==0">
+					<ion-card *ngFor="let client of poloMax.categories;let i=index;" class="text-center slider-item" style="color:blue;">
+						<span *ngIf="i==0">
+							<span *ngFor="let img of poloMax.images;let j=index;" >
+								<ion-card *ngIf="j==0" class="img-width">
+									<img [src]="img.src" *ngFor="let card4 of cards4" (click)="cardTapped($event,card4)"/>
+								</ion-card>
+							</span>
+							<div style="text-align:center;width:100%;margin:10px 10px 10px 2px;color:black;">
+								{{client.name}} <br>
+								<button ion-button style="text-align:center" class="ioncolor" color="dark" small style="box-shadow:5px 5px 2px grey" *ngFor="let card4 of cards4" (click)="cardTapped($event,card4)">~ View More ~</button>
+							</div>
+						</span>
+					</ion-card>
+				</span>
+			</span>
+		</ion-col>
+		
+		<ion-col col-6>
+			<span *ngFor="let poloMax of categories5;let k=index;">
+				<span *ngIf="k==0">
+					<ion-card *ngFor="let client of poloMax.categories;let i=index;" class="text-center slider-item" style="color:blue;">
+						<span *ngIf="i==0">
+							<span *ngFor="let img of poloMax.images;let j=index;" >
+								<ion-card *ngIf="j==0" class="img-width">
+									<img [src]="img.src" *ngFor="let card5 of cards5" (click)="cardTapped($event,card5)"/>
+								</ion-card>
+							</span>
+							<div style="text-align:center;width:100%;margin:10px 10px 10px 2px;color:black;">
+								{{client.name}} <br>
+								<button ion-button style="text-align:center" class="ioncolor" color="dark" small style="box-shadow:5px 5px 2px grey" *ngFor="let card5 of cards5" (click)="cardTapped($event,card5)">~ View More ~</button>
+							</div>
+						</span>
+					</ion-card>
+				</span>
+			</span>
+		</ion-col>
+		
+		<ion-col col-6>
+			<span *ngFor="let poloMax of categories6;let k=index;">
+				<span *ngIf="k==0">
+					<ion-card *ngFor="let client of poloMax.categories;let i=index;" class="text-center slider-item" style="color:blue;">
+						<span *ngIf="i==0">
+							<span *ngFor="let img of poloMax.images;let j=index;">
+								<ion-card *ngIf="j==0" class="img-width">
+									<img [src]="img.src" *ngFor="let card6 of cards6" (click)="cardTapped($event,card6)"/>
+								</ion-card>
+							</span>
+							<div style="text-align:center;width:100%;margin:10px 10px 10px 2px;color:black;">
+								{{client.name}} <br>
+								<button ion-button style="text-align:center" class="ioncolor" color="dark" small style="box-shadow:5px 5px 2px grey" *ngFor="let card6 of cards6" (click)="cardTapped($event,card6)">~ View More ~</button>
+							</div>
+						</span>
+					</ion-card>
+				</span>
+			</span>
+		</ion-col>
+		
+		<ion-col col-6>
+			<span *ngFor="let poloMax of categories1;let k=index;">
+				<span *ngIf="k==0">
+					<ion-card *ngFor="let client of poloMax.categories;let i=index;" class="text-center slider-item" style="color:blue;">
+						<span *ngIf="i==0">
+							<span *ngFor="let img of poloMax.images;let j=index;">
+								<ion-card *ngIf="j==0" class="img-width">
+									<img [src]="img.src" *ngFor="let card7 of cards7" (click)="cardTapped($event,card7)"/>
+								</ion-card>
+							</span>
+							<div style="text-align:center;width:100%;margin:10px 10px 10px 2px;color:black;">
+								{{client.name}} <br>
+								<button ion-button style="text-align:center" class="ioncolor" color="dark" small style="box-shadow:5px 5px 2px grey" *ngFor="let card7 of cards7" (click)="cardTapped($event,card7)">~ View More ~</button>
+							</div>
+						</span>
+					</ion-card>
+				</span>
+			</span>
+		</ion-col>
+		
+		<ion-col col-6>
+			<span *ngFor="let poloMax of categories2;let k=index;">
+				<span *ngIf="k==0">
+					<ion-card *ngFor="let client of poloMax.categories;let i=index;" class="text-center slider-item" style="color:blue;">
+						<span *ngIf="i==0">
+							<span *ngFor="let img of poloMax.images;let j=index;">
+								<ion-card *ngIf="j==0" class="img-width">
+									<img [src]="img.src" *ngFor="let card8 of cards8" (click)="cardTapped($event,card8)"/>
+								</ion-card>
+							</span>
+							<div style="text-align:center;width:100%;margin:10px 10px 10px 2px;color:black;">
+								{{client.name}} <br>
+								<button ion-button style="text-align:center" class="ioncolor" color="dark" small style="box-shadow:5px 5px 2px grey" *ngFor="let card8 of cards8" (click)="cardTapped($event,card8)">~ View More ~</button>
+							</div>
+						</span>
+					</ion-card>
+				</span>
+			</span>
+		</ion-col>
+		
+		<ion-col col-6>
+			<span *ngFor="let poloMax of categories9;let k=index;">
+				<span *ngIf="k==0">
+					<ion-card *ngFor="let client of poloMax.categories;let i=index;" class="text-center slider-item" style="color:blue;">
+						<span *ngIf="i==0">
+							<span *ngFor="let img of poloMax.images;let j=index;">
+								<ion-card *ngIf="j==0" class="img-width">
+									<img [src]="img.src" *ngFor="let card9 of cards9" (click)="cardTapped($event,card9)"/>
+								</ion-card>
+							</span>
+							<div style="text-align:center;width:100%;margin:10px 10px 10px 2px;color:black;">
+								{{client.name}}<br>
+								<button ion-button style="text-align:center" class="ioncolor" color="dark" small style="box-shadow:5px 5px 2px grey" *ngFor="let card9 of cards9" (click)="cardTapped($event,card9)">~ View More ~</button>
+							</div>
+						</span>
+					</ion-card>
+				</span>
+			</span>
+		</ion-col>
+		
+		<ion-col col-6>
+			<span *ngFor="let poloMax of categories10;let k=index;">
+				<span *ngIf="k==0">
+					<ion-card *ngFor="let client of poloMax.categories;let i=index;" class="text-center slider-item" style="color:blue;">
+						<span *ngIf="i==0">
+							<span *ngFor="let img of poloMax.images;let j=index;">
+								<ion-card *ngIf="j==0" class="img-width">
+									<img [src]="img.src" *ngFor="let card10 of cards10" (click)="cardTapped($event,card10)"/>
+								</ion-card>
+							</span>
+							<div style="text-align:center;width:100%;margin:10px 10px 10px 2px;color:black;">
+								{{client.name}}<br>
+								<button ion-button style="text-align:center" class="ioncolor" color="dark" small style="box-shadow:5px 5px 2px grey" *ngFor="let card10 of cards10" (click)="cardTapped($event,card10)">~ View More ~</button>
+							</div>
+						</span>
+					</ion-card>
+				</span>
+			</span>
+		</ion-col>
+		
+	</ion-row>

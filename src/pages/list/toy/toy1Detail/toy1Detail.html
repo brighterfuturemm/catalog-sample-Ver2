@@ -1,0 +1,53 @@
+<ion-header>
+	<ion-navbar color="light">
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Toy Detail</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+		<ion-refresher-content
+			pullingIcon="arrow-dropdown"
+			pullingText="Pull to refresh"
+			refreshingSpinner="circles"
+			refreshingText="Refreshing...">
+		</ion-refresher-content>
+	</ion-refresher>
+	
+	<ion-card >
+		 <ion-slides pager autoplay="4000" >	
+		  <ion-slide *ngFor="let img of posts.images" slidesPerView="1.5" >
+		   <img [src]="img.src">
+		  </ion-slide >
+	     </ion-slides>
+	     
+	     <span class="marcol" style="margin:10px 10px 10px 10px;width:100%;text-align:center;font-weight:bold;">
+			 <ion-list>
+				 
+				 <small class="textTitleColor" style="font-size:15px;">
+					 {{posts.name}}<br><br>
+				 </small>
+				 
+				 <small class="textColor">
+					 <small [innerHtml]="posts.short_description"></small><br>
+				 </small>
+		
+				<small style="font-size:15px;" class="textTitleColor">
+					Price : {{posts.price}} Ks
+				</small>
+		 
+			</ion-list> 
+	     </span>	    
+	     
+	   </ion-card>
+	  <div class="order-list">
+		   <button ion-button color="dark" class="ioncolor" (click)="openModal(posts.id,posts.slug,posts.images)" class="ioncolor">Order Now!</button>
+	   </div>
+	
+	
+</ion-content>
+

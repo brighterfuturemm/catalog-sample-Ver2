@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar color="light">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Setting</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+		 <h3 class="h3color" style="font-family:Abyssinica SIL;text-align:center;text-shadow:1px 1px .5px black;">Default Theme</h3>
+		 <button class="pop-in" ion-button color="white"  style="margin-left:45%;border-radius:100%;background:#344153;color:#344153;" ion-button (click)="changeTheme('')">
+			  <ion-icon >0</ion-icon>
+		 </button><br>
+        <h3 class="h3color" style="font-family:Abyssinica SIL;text-align:center;text-shadow:1px 1px .5px black;"> Change Theme</h3>
+		<ion-card style="padding-top:7%;padding-bottom:7%;">
+		  <button class="pop-in" ion-button color="dark" style="margin-left:23%;border-radius:100%;background:#607d8b;color:#607d8b"  (click)="changeTheme('theme-color1')">
+			  <ion-icon  >1</ion-icon>
+		  </button>
+		  <button class="pop-in" ion-button color="red" style="border-radius:100%;background:#3f51b5;color:#3f51b5" (click)="changeTheme('theme-color2')">
+			  <ion-icon  >2</ion-icon>
+		  </button>
+		   <button class="pop-in" ion-button color="green" style="border-radius:100%;background:#4cb050;color:#4cb050" (click)="changeTheme('theme-color3')">
+			  <ion-icon  >3</ion-icon>
+		  </button>
+			 <button class="pop-in" ion-button color="#ff0000" style="border-radius:100%;background:#ea1e63;color:#ea1e63" (click)="changeTheme('theme-color4')">
+			  <ion-icon  >4</ion-icon>
+		  </button><br>
+		   <button class="pop-in" ion-button color="dark" style="margin-left:23%;border-radius:100%;background:#00bcd5;color:#00bcd5"  (click)="changeTheme('theme-color5')">
+			  <ion-icon  >5</ion-icon>
+		  </button>
+		  <button class="pop-in" ion-button color="red" style="border-radius:100%;background:#673bb7;color:#673bb7" (click)="changeTheme('theme-color6')">
+			  <ion-icon  >6</ion-icon>
+		  </button>
+		   <button class="pop-in" ion-button color="green" style="border-radius:100%;background:#fe5722;color:#fe5722" (click)="changeTheme('theme-color7')">
+			  <ion-icon  >7</ion-icon>
+		  </button>
+			 <button class="pop-in" ion-button color="#ff0000" style="border-radius:100%;background:#2196f3;color:#2196f3" (click)="changeTheme('theme-color8')">
+			  <ion-icon  >8</ion-icon>
+		  </button>
+		 </ion-card>
+</ion-content>

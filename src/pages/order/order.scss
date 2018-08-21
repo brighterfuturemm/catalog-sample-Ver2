@@ -1,0 +1,31 @@
+@import '../../theme/color1.theme';
+@import '../../theme/color2.theme';
+@import '../../theme/color3.theme';
+@import '../../theme/color4.theme';
+@import '../../theme/color5.theme';
+@import '../../theme/color6.theme';
+@import '../../theme/color7.theme';
+@import '../../theme/color8.theme';
+@import '../../theme/light.theme';
+@import '../../theme/animations';
+
+page-order{
+.card-background-page {
+
+  .card-title h6{
+		text-align:center;
+		color:#344153;
+		font-size:15px;
+		font-family:Monospace;
+  }
+  .card-subtitle {
+		text-align:center;
+		color:#344153;
+		font-size:15px;
+		font-family:Monospace;  }
+  }
+ 
+  ion-col{ 
+	text-align: center;
+ }
+}

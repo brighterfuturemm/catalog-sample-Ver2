@@ -1,0 +1,39 @@
+<ion-header>
+	<ion-navbar color="light">
+		<button ion-button menuToggle >
+			<ion-icon name="menu"></ion-icon>
+		</button>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  
+	<ion-slides pager="false" autoplay="2000" loop="true" speed="1500" effect="fade">
+    <ion-slide class="slide-background swiper-no-swiping" *ngFor="let background of backgrounds" [ngStyle]="{'background-image': 'url(' + background +')'}">
+    </ion-slide>
+  </ion-slides>
+  
+  <div class="login-container">
+	  
+	  <br><br><br><br>
+	  <ion-card style="margin: 0px; border: none; width: 100%;background: rgba(0, 0, 0, 0.1);color: #f1f1f1;">
+		  <img src="./assets/img/logo/twork.png" style="width:70%; margin: auto; padding:20px;" />
+	  </ion-card>
+	  
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text" [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button block color="light" (click)="doAlert()">Login</button>
+  <button ion-button clear block color="light" (click)="doAlert()">No Account? Sign Up Here</button>
+  </div>
+
+</ion-content>

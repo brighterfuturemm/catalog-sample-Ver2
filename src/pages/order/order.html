@@ -1,0 +1,63 @@
+<ion-header>
+	<ion-navbar color="light">
+		<ion-title>Order Form</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-item class="card-background-page">
+		
+		<div class="card-title">
+			<h6 style="text-align:center;">
+				<small class="textAboutColor" style="font-size:18px;">
+					Please Fill this Form <br>to make sure to order
+				</small>
+			</h6>
+		</div>
+		
+		<ion-card>
+			<img [src]="images[0].src">
+		</ion-card>
+		
+		<div class="card-subtitle">
+			<small class="textAboutColor" style="font-size:15px;">
+				Product Name : {{product_name}}
+			</small>
+		</div>
+		
+	</ion-item>
+	
+	<ion-item>
+		<ion-label class="textAboutColor">Name :</ion-label>
+		<ion-input class="textAboutColor" type="text" [(ngModel)]="customer_name" required></ion-input>
+	</ion-item>
+
+	<ion-item>
+		<ion-label class="textAboutColor">Email :</ion-label>
+		<ion-input class="textAboutColor" type="email" [(ngModel)]="customer_email" required></ion-input>
+	</ion-item>
+	  
+	<ion-item>
+		<ion-label class="textAboutColor">Phone :</ion-label>
+		<ion-input class="textAboutColor" type="text" [(ngModel)]="customer_phone" required></ion-input>
+	</ion-item>
+	  
+	<ion-item>
+		<ion-label class="textAboutColor">Number of Products :</ion-label>
+		<ion-input class="textAboutColor" type="text" [(ngModel)]="product_no" required></ion-input>
+	</ion-item>
+
+	<ion-row>	
+		<ion-col col-6>
+			<button ion-button color="danger" small (click)="dismiss()">
+				<div>Cancel</div>
+			</button>
+		</ion-col>
+		
+		<ion-col col-6>
+			<button ion-button color="dark" small (click)="orderConfirm(id,images,product_name,customer_name,customer_email,customer_phone,product_no)" class="ioncolor">
+				<div>Confirm</div>
+			</button>
+		</ion-col>
+	</ion-row>
+</ion-content>

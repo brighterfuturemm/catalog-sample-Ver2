@@ -1,0 +1,28 @@
+@import '../../../../theme/color1.theme';
+@import '../../../../theme/color2.theme';
+@import '../../../../theme/color3.theme';
+@import '../../../../theme/color4.theme';
+@import '../../../../theme/color5.theme';
+@import '../../../../theme/color6.theme';
+@import '../../../../theme/color7.theme';
+@import '../../../../theme/color8.theme';
+@import '../../../../theme/light.theme';
+@import '../../../../theme/animations';
+
+page-bag1Detail {
+div.order-list{
+		text-align:center;
+	}
+	div.order-list button{
+		box-shadow:5px 5px 2px grey;
+		font-size:13px;
+	}
+	
+	.swiper-pagination-bullet {
+		background-color:#344153;
+	}
+	.swiper-pagination-bullet-active {
+		background-color:#344153;
+	}
+
+}

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar color="light">
+    <button ion-button menuToggle >
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Phone</ion-title>
+   
+   
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="marcol">
+	
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+		<ion-refresher-content
+			pullingIcon="arrow-dropdown"
+			pullingText="Pull to refresh"
+			refreshingSpinner="circles"
+			refreshingText="Refreshing...">
+		</ion-refresher-content>
+	</ion-refresher>
+	
+	<ion-row>
+		
+		<ion-col *ngFor="let poloMax of polomaxs;let k=index;" col-6>
+			<ion-col class="marcol">
+				<ion-card *ngFor="let client of poloMax.categories;let i=index;" class="text-center slider-item" style="color:blue;">
+					<span *ngIf="i==0">
+						<span *ngFor="let img of poloMax.images;let j=index;">
+							<ion-card *ngIf="j==0" class="img-width">
+								<img [src]="img.src" (click)="cardTapped($event,k)"/>
+							</ion-card>
+						</span>
+						<div style="text-align:center;width:100%;margin:10px 10px 10px 2px;color:black;">
+							{{poloMax.name}}<br>
+							<button ion-button style="text-align:center" class="ioncolor" color="dark" small style="box-shadow:5px 5px 2px grey"  (click)="cardTapped($event,k)">~ Details ~</button>
+						</div>
+					</span>
+				</ion-card>
+			</ion-col>
+		</ion-col>
+		
+	 </ion-row>
+	
+</ion-content>
+

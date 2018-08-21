@@ -1,0 +1,153 @@
+<ion-header>
+	<ion-navbar color="light">
+		<button ion-button menuToggle >
+			<ion-icon name="menu"></ion-icon>
+		</button>
+    <ion-title>Sign Up</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<ion-item-divider color="light" class="Color">Personal Details</ion-item-divider>
+
+		<ion-item>
+			<ion-label style="color:#344153;">First Name</ion-label>
+			<ion-input style="color:#344153;" type="text"></ion-input>
+		</ion-item>
+    
+		<ion-item>
+			<ion-label style="color:#344153;">Last Name</ion-label>
+			<ion-input style="color:#344153;" type="text"></ion-input>
+		</ion-item>
+    
+		<ion-item>
+			<ion-label style="color:#344153;">Email</ion-label>
+			<ion-input style="color:#344153;" type="email"></ion-input>
+		</ion-item>
+    
+		<ion-item>
+			<ion-label style="color:#344153;">Username</ion-label>
+			<ion-input style="color:#344153;" type="text"></ion-input>
+		</ion-item>
+    
+		<ion-item>
+			<ion-label style="color:#344153;">Password</ion-label>
+			<ion-input style="color:#344153;" type="password"></ion-input>
+		</ion-item>
+    
+		<ion-item>
+			<ion-label style="color:#344153;">Confirm Password</ion-label>
+			<ion-input style="color:#344153;" type="password"></ion-input>
+		</ion-item>
+		
+		<ion-item-divider color="light" class="Color">Billing Details</ion-item-divider>
+		
+		<ion-item>
+			<ion-label style="color:#344153;">Address Line 1</ion-label>
+			<ion-textarea type="text" maxlength="80" style="color:#344153;"></ion-textarea>
+		</ion-item>
+
+		<ion-item>
+			<ion-label style="color:#344153;">Address Line 2</ion-label>
+			<ion-textarea type="text" maxlength="80" style="color:#344153;"></ion-textarea>
+		</ion-item>
+
+		<ion-item>
+			<ion-label style="color:#344153;">Country</ion-label>
+			<ion-select>
+				<ion-option value="Myanmar" selected="true">Myanmar</ion-option>
+				<ion-option value="Thailand">Thailand</ion-option>
+				<ion-option value="Singapore">Singapore</ion-option>
+				<ion-option value="America">America</ion-option>
+				<ion-option value="United Kingdom">United Kingdom</ion-option>
+			</ion-select>
+		</ion-item>
+
+		<ion-item>
+			<ion-label style="color:#344153;">State</ion-label>
+			<ion-select>
+				<ion-option value="Myanmar" selected="true">Myanmar</ion-option>
+				<ion-option value="Thailand">Thailand</ion-option>
+				<ion-option value="Singapore">Singapore</ion-option>
+				<ion-option value="America">America</ion-option>
+				<ion-option value="United Kingdom">United Kingdom</ion-option>
+			</ion-select>
+		</ion-item>
+
+		<ion-item>
+			<ion-label style="color:#344153;">City</ion-label>
+			<ion-input type="text" style="color:#344153;"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label style="color:#344153;">Postal Code</ion-label>
+			<ion-input type="number" clearInput style="color:#344153;"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label style="color:#344153;">Phone</ion-label>
+			<ion-input type="tel" clearInput style="color:#344153;"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label style="color:#344153;">Same Shipping Details</ion-label>
+			<ion-checkbox></ion-checkbox>
+		</ion-item>
+
+		<ion-item-divider color="light" *ngIf="!billing_shipping_same" class="Color">Shipping Details</ion-item-divider>
+
+		<ion-item *ngIf="!billing_shipping_same">
+			<ion-label style="color:#344153;">Address Line 1</ion-label>
+			<ion-textarea type="text" maxlength="80" style="color:#344153;"></ion-textarea>
+		</ion-item>
+
+		<ion-item *ngIf="!billing_shipping_same">
+			<ion-label style="color:#344153;">Address Line 2</ion-label>
+			<ion-textarea type="text" maxlength="80" style="color:#344153;"></ion-textarea>
+		</ion-item>
+
+		<ion-item *ngIf="!billing_shipping_same">
+			<ion-label style="color:#344153;">Country</ion-label>
+			<ion-select>
+				<ion-option value="Myanmar" selected="true">Myanmar</ion-option>
+				<ion-option value="Thailand">Thailand</ion-option>
+				<ion-option value="Singapore">Singapore</ion-option>
+				<ion-option value="America">America</ion-option>
+				<ion-option value="United Kingdom">United Kingdom</ion-option>
+			</ion-select>
+		</ion-item>
+
+		<ion-item *ngIf="!billing_shipping_same">
+			<ion-label style="color:#344153;">State</ion-label>
+			<ion-select>
+				<ion-option value="Myanmar" selected="true">Myanmar</ion-option>
+				<ion-option value="Thailand">Thailand</ion-option>
+				<ion-option value="Singapore">Singapore</ion-option>
+				<ion-option value="America">America</ion-option>
+				<ion-option value="United Kingdom">United Kingdom</ion-option>
+			</ion-select>
+		</ion-item>
+
+		<ion-item *ngIf="!billing_shipping_same">
+			<ion-label style="color:#344153;">City</ion-label>
+			<ion-input type="text" style="color:#344153;"></ion-input>        
+		</ion-item>
+
+		<ion-item *ngIf="!billing_shipping_same">
+			<ion-label style="color:#344153;">Postal Code</ion-label>
+			<ion-input type="number" clearInput style="color:#344153;"></ion-input>        
+		</ion-item>
+
+		<ion-item *ngIf="!billing_shipping_same">
+			<ion-label style="color:#344153;">Phone</ion-label>
+			<ion-input type="tel" clearInput style="color:#344153;"></ion-input>        
+		</ion-item>
+		
+	</ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <button ion-button block color="light" (click)="doAlert()" class="Color">Sign Up</button>
+</ion-footer>
