@@ -18,8 +18,8 @@ import 'rxjs/add/operator/map';
     export var h2;
     export var h3;
     var bgslides = [];  
-    var url='https://catalog.tworksystem.com/wp-json/wp/v2/media?per_page=100';
-    var purl='https://catalog.tworksystem.com/wp-json/wc/v1/products?fields=18&consumer_key=ck_c13a1bc75d4bc671d36f57437e77dc4a9f185723&consumer_secret=cs_2e8b00282d7673b362749af0c0d82dcf408895ca&filter[posts_per_page]=-1';
+    var url='https://www.yourwebsite.com/wp-json/wp/v2/media?per_page=100';
+    var purl='https://www.yourwebsite.com/wp-json/wc/v1/products?fields=18&consumer_key=ck_*****&consumer_secret=cs_*****&filter[posts_per_page]=-1';
     var ttl = 5;
 	var delayType = 'all';
 	
